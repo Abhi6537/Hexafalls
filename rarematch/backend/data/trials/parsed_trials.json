@@ -1,0 +1,33 @@
+[
+  {
+    "nctId": "NCT04999866",
+    "title": "A Clinical Trial to Evaluate the Safety and Efficacy of Migalastat in Patients with Fabry Disease",
+    "inclusion_criteria": [
+      "Documented clinical diagnosis of Fabry disease (GLA mutation status confirmed).",
+      "Male or female aged 18 years or older.",
+      "Estimated glomerular filtration rate (eGFR) >= 30 mL/min/1.73 m2.",
+      "On stable enzyme replacement therapy (ERT) for at least 12 months prior to screening."
+    ],
+    "exclusion_criteria": [
+      "History of kidney transplantation or currently receiving dialysis.",
+      "History of stroke or transient ischemic attack (TIA) within the last 6 months.",
+      "Pregnant or breastfeeding female.",
+      "Known hypersensitivity or allergy to migalastat or its excipients."
+    ]
+  },
+  {
+    "nctId": "NCT05123456",
+    "title": "A Phase 1/2 Study of Gene Therapy (FLT190) in Patients with Fabry Disease",
+    "inclusion_criteria": [
+      "Male patients aged 18 to 50 years.",
+      "Confirmed diagnosis of classic Fabry disease (GLA activity < 1% of normal).",
+      "eGFR >= 45 mL/min/1.73 m2.",
+      "High Lyso-Gb3 levels at screening."
+    ],
+    "exclusion_criteria": [
+      "Presence of neutralizing antibodies to AAV2/6 capsid.",
+      "History of stroke, heart failure, or severe cardiac hypertrophy.",
+      "Severe kidney disease or dialysis."
+    ]
+  }
+]

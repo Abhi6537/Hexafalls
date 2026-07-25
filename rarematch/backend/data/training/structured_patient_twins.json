@@ -1,0 +1,1332 @@
+[
+  {
+    "patient_id": "PAT-TWIN-001",
+    "age": 64,
+    "sex": "Female",
+    "genetic_status": "GLA mutation positive",
+    "phenotypes": [
+      "neuropathic pain",
+      "angiokeratoma",
+      "left ventricular hypertrophy"
+    ],
+    "hpo_codes": [
+      "HP:0001903",
+      "HP:0001014",
+      "HP:0001712"
+    ],
+    "labs": {
+      "eGFR": 84.3,
+      "creatinine": 0.98
+    },
+    "medications": [
+      "agalsidase beta"
+    ],
+    "ert_duration_months": 9
+  },
+  {
+    "patient_id": "PAT-TWIN-002",
+    "age": 23,
+    "sex": "Female",
+    "genetic_status": "GLA mutation positive",
+    "phenotypes": [
+      "neuropathic pain",
+      "corneal opacity",
+      "proteinuria"
+    ],
+    "hpo_codes": [
+      "HP:0001903",
+      "HP:0001131",
+      "HP:0000093"
+    ],
+    "labs": {
+      "eGFR": 74.1,
+      "creatinine": 0.85
+    },
+    "medications": [
+      "agalsidase beta"
+    ],
+    "ert_duration_months": 14
+  },
+  {
+    "patient_id": "PAT-TWIN-003",
+    "age": 37,
+    "sex": "Female",
+    "genetic_status": "GLA mutation positive",
+    "phenotypes": [
+      "neuropathic pain",
+      "angiokeratoma",
+      "corneal opacity",
+      "hypohidrosis",
+      "proteinuria"
+    ],
+    "hpo_codes": [
+      "HP:0001903",
+      "HP:0001014",
+      "HP:0001131",
+      "HP:0000966",
+      "HP:0000093"
+    ],
+    "labs": {
+      "eGFR": 91.7,
+      "creatinine": 1.05
+    },
+    "medications": [
+      "agalsidase beta"
+    ],
+    "ert_duration_months": 20
+  },
+  {
+    "patient_id": "PAT-TWIN-004",
+    "age": 41,
+    "sex": "Female",
+    "genetic_status": "GLA mutation positive",
+    "phenotypes": [
+      "neuropathic pain",
+      "corneal opacity",
+      "hypohidrosis"
+    ],
+    "hpo_codes": [
+      "HP:0001903",
+      "HP:0001131",
+      "HP:0000966"
+    ],
+    "labs": {
+      "eGFR": 79.2,
+      "creatinine": 0.91
+    },
+    "medications": [
+      "agalsidase beta"
+    ],
+    "ert_duration_months": 16
+  },
+  {
+    "patient_id": "PAT-TWIN-005",
+    "age": 61,
+    "sex": "Female",
+    "genetic_status": "GLA mutation positive",
+    "phenotypes": [
+      "corneal opacity",
+      "hypohidrosis",
+      "left ventricular hypertrophy",
+      "proteinuria"
+    ],
+    "hpo_codes": [
+      "HP:0001131",
+      "HP:0000966",
+      "HP:0001712",
+      "HP:0000093"
+    ],
+    "labs": {
+      "eGFR": 73.4,
+      "creatinine": 0.94
+    },
+    "medications": [
+      "agalsidase beta"
+    ],
+    "ert_duration_months": 31
+  },
+  {
+    "patient_id": "PAT-TWIN-006",
+    "age": 20,
+    "sex": "Male",
+    "genetic_status": "GLA mutation positive",
+    "phenotypes": [
+      "neuropathic pain",
+      "angiokeratoma",
+      "corneal opacity",
+      "proteinuria"
+    ],
+    "hpo_codes": [
+      "HP:0001903",
+      "HP:0001014",
+      "HP:0001131",
+      "HP:0000093"
+    ],
+    "labs": {
+      "eGFR": 88.7,
+      "creatinine": 1.17
+    },
+    "medications": [
+      "agalsidase beta"
+    ],
+    "ert_duration_months": 20
+  },
+  {
+    "patient_id": "PAT-TWIN-007",
+    "age": 20,
+    "sex": "Male",
+    "genetic_status": "GLA mutation positive",
+    "phenotypes": [
+      "neuropathic pain",
+      "hypohidrosis",
+      "left ventricular hypertrophy"
+    ],
+    "hpo_codes": [
+      "HP:0001903",
+      "HP:0000966",
+      "HP:0001712"
+    ],
+    "labs": {
+      "eGFR": 99.4,
+      "creatinine": 0.99
+    },
+    "medications": [
+      "agalsidase beta"
+    ],
+    "ert_duration_months": 21
+  },
+  {
+    "patient_id": "PAT-TWIN-008",
+    "age": 33,
+    "sex": "Female",
+    "genetic_status": "GLA mutation positive",
+    "phenotypes": [
+      "angiokeratoma",
+      "hypohidrosis",
+      "renal impairment",
+      "left ventricular hypertrophy",
+      "proteinuria"
+    ],
+    "hpo_codes": [
+      "HP:0001014",
+      "HP:0000966",
+      "HP:0012211",
+      "HP:0001712",
+      "HP:0000093"
+    ],
+    "labs": {
+      "eGFR": 34.3,
+      "creatinine": 3.17
+    },
+    "medications": [
+      "agalsidase beta"
+    ],
+    "ert_duration_months": 27
+  },
+  {
+    "patient_id": "PAT-TWIN-009",
+    "age": 30,
+    "sex": "Male",
+    "genetic_status": "GLA mutation positive",
+    "phenotypes": [
+      "neuropathic pain",
+      "angiokeratoma",
+      "corneal opacity",
+      "hypohidrosis",
+      "left ventricular hypertrophy"
+    ],
+    "hpo_codes": [
+      "HP:0001903",
+      "HP:0001014",
+      "HP:0001131",
+      "HP:0000966",
+      "HP:0001712"
+    ],
+    "labs": {
+      "eGFR": 70.7,
+      "creatinine": 0.72
+    },
+    "medications": [
+      "agalsidase beta"
+    ],
+    "ert_duration_months": 22
+  },
+  {
+    "patient_id": "PAT-TWIN-010",
+    "age": 35,
+    "sex": "Male",
+    "genetic_status": "GLA mutation positive",
+    "phenotypes": [
+      "angiokeratoma",
+      "corneal opacity",
+      "hypohidrosis",
+      "renal impairment",
+      "proteinuria"
+    ],
+    "hpo_codes": [
+      "HP:0001014",
+      "HP:0001131",
+      "HP:0000966",
+      "HP:0012211",
+      "HP:0000093"
+    ],
+    "labs": {
+      "eGFR": 27.5,
+      "creatinine": 1.96
+    },
+    "medications": [
+      "agalsidase beta"
+    ],
+    "ert_duration_months": 26
+  },
+  {
+    "patient_id": "PAT-TWIN-011",
+    "age": 41,
+    "sex": "Male",
+    "genetic_status": "GLA mutation positive",
+    "phenotypes": [
+      "neuropathic pain",
+      "angiokeratoma",
+      "left ventricular hypertrophy"
+    ],
+    "hpo_codes": [
+      "HP:0001903",
+      "HP:0001014",
+      "HP:0001712"
+    ],
+    "labs": {
+      "eGFR": 71.2,
+      "creatinine": 0.88
+    },
+    "medications": [
+      "agalsidase beta"
+    ],
+    "ert_duration_months": 9
+  },
+  {
+    "patient_id": "PAT-TWIN-012",
+    "age": 35,
+    "sex": "Female",
+    "genetic_status": "GLA mutation positive",
+    "phenotypes": [
+      "neuropathic pain",
+      "hypohidrosis",
+      "proteinuria"
+    ],
+    "hpo_codes": [
+      "HP:0001903",
+      "HP:0000966",
+      "HP:0000093"
+    ],
+    "labs": {
+      "eGFR": 107.1,
+      "creatinine": 1.15
+    },
+    "medications": [
+      "agalsidase beta"
+    ],
+    "ert_duration_months": 22
+  },
+  {
+    "patient_id": "PAT-TWIN-013",
+    "age": 62,
+    "sex": "Male",
+    "genetic_status": "GLA mutation positive",
+    "phenotypes": [
+      "neuropathic pain",
+      "angiokeratoma",
+      "corneal opacity",
+      "hypohidrosis",
+      "renal impairment",
+      "left ventricular hypertrophy",
+      "proteinuria"
+    ],
+    "hpo_codes": [
+      "HP:0001903",
+      "HP:0001014",
+      "HP:0001131",
+      "HP:0000966",
+      "HP:0012211",
+      "HP:0001712",
+      "HP:0000093"
+    ],
+    "labs": {
+      "eGFR": 26.1,
+      "creatinine": 2.9
+    },
+    "medications": [
+      "agalsidase beta"
+    ],
+    "ert_duration_months": 35
+  },
+  {
+    "patient_id": "PAT-TWIN-014",
+    "age": 34,
+    "sex": "Female",
+    "genetic_status": "GLA mutation positive",
+    "phenotypes": [
+      "neuropathic pain",
+      "corneal opacity",
+      "proteinuria"
+    ],
+    "hpo_codes": [
+      "HP:0001903",
+      "HP:0001131",
+      "HP:0000093"
+    ],
+    "labs": {
+      "eGFR": 108.0,
+      "creatinine": 1.04
+    },
+    "medications": [],
+    "ert_duration_months": 0
+  },
+  {
+    "patient_id": "PAT-TWIN-015",
+    "age": 43,
+    "sex": "Male",
+    "genetic_status": "GLA mutation positive",
+    "phenotypes": [
+      "neuropathic pain",
+      "angiokeratoma",
+      "hypohidrosis",
+      "left ventricular hypertrophy"
+    ],
+    "hpo_codes": [
+      "HP:0001903",
+      "HP:0001014",
+      "HP:0000966",
+      "HP:0001712"
+    ],
+    "labs": {
+      "eGFR": 85.8,
+      "creatinine": 0.96
+    },
+    "medications": [
+      "agalsidase beta"
+    ],
+    "ert_duration_months": 18
+  },
+  {
+    "patient_id": "PAT-TWIN-016",
+    "age": 63,
+    "sex": "Female",
+    "genetic_status": "GLA mutation positive",
+    "phenotypes": [
+      "neuropathic pain",
+      "angiokeratoma",
+      "hypohidrosis",
+      "left ventricular hypertrophy"
+    ],
+    "hpo_codes": [
+      "HP:0001903",
+      "HP:0001014",
+      "HP:0000966",
+      "HP:0001712"
+    ],
+    "labs": {
+      "eGFR": 81.6,
+      "creatinine": 0.96
+    },
+    "medications": [
+      "agalsidase beta"
+    ],
+    "ert_duration_months": 27
+  },
+  {
+    "patient_id": "PAT-TWIN-017",
+    "age": 48,
+    "sex": "Female",
+    "genetic_status": "GLA mutation positive",
+    "phenotypes": [
+      "neuropathic pain",
+      "angiokeratoma",
+      "corneal opacity",
+      "hypohidrosis",
+      "left ventricular hypertrophy",
+      "proteinuria"
+    ],
+    "hpo_codes": [
+      "HP:0001903",
+      "HP:0001014",
+      "HP:0001131",
+      "HP:0000966",
+      "HP:0001712",
+      "HP:0000093"
+    ],
+    "labs": {
+      "eGFR": 70.6,
+      "creatinine": 0.76
+    },
+    "medications": [
+      "agalsidase beta"
+    ],
+    "ert_duration_months": 24
+  },
+  {
+    "patient_id": "PAT-TWIN-018",
+    "age": 64,
+    "sex": "Male",
+    "genetic_status": "GLA mutation positive",
+    "phenotypes": [
+      "hypohidrosis",
+      "renal impairment",
+      "left ventricular hypertrophy",
+      "proteinuria"
+    ],
+    "hpo_codes": [
+      "HP:0000966",
+      "HP:0012211",
+      "HP:0001712",
+      "HP:0000093"
+    ],
+    "labs": {
+      "eGFR": 24.9,
+      "creatinine": 2.94
+    },
+    "medications": [
+      "agalsidase beta"
+    ],
+    "ert_duration_months": 17
+  },
+  {
+    "patient_id": "PAT-TWIN-019",
+    "age": 54,
+    "sex": "Female",
+    "genetic_status": "GLA mutation positive",
+    "phenotypes": [
+      "neuropathic pain",
+      "corneal opacity",
+      "hypohidrosis",
+      "proteinuria"
+    ],
+    "hpo_codes": [
+      "HP:0001903",
+      "HP:0001131",
+      "HP:0000966",
+      "HP:0000093"
+    ],
+    "labs": {
+      "eGFR": 99.5,
+      "creatinine": 0.78
+    },
+    "medications": [
+      "agalsidase beta"
+    ],
+    "ert_duration_months": 19
+  },
+  {
+    "patient_id": "PAT-TWIN-020",
+    "age": 30,
+    "sex": "Male",
+    "genetic_status": "GLA mutation positive",
+    "phenotypes": [
+      "neuropathic pain",
+      "angiokeratoma",
+      "hypohidrosis",
+      "renal impairment",
+      "proteinuria"
+    ],
+    "hpo_codes": [
+      "HP:0001903",
+      "HP:0001014",
+      "HP:0000966",
+      "HP:0012211",
+      "HP:0000093"
+    ],
+    "labs": {
+      "eGFR": 15.5,
+      "creatinine": 3.05
+    },
+    "medications": [
+      "agalsidase beta"
+    ],
+    "ert_duration_months": 4
+  },
+  {
+    "patient_id": "PAT-TWIN-021",
+    "age": 21,
+    "sex": "Male",
+    "genetic_status": "GLA mutation positive",
+    "phenotypes": [
+      "neuropathic pain",
+      "angiokeratoma",
+      "corneal opacity",
+      "hypohidrosis",
+      "proteinuria"
+    ],
+    "hpo_codes": [
+      "HP:0001903",
+      "HP:0001014",
+      "HP:0001131",
+      "HP:0000966",
+      "HP:0000093"
+    ],
+    "labs": {
+      "eGFR": 80.7,
+      "creatinine": 1.07
+    },
+    "medications": [
+      "agalsidase beta"
+    ],
+    "ert_duration_months": 30
+  },
+  {
+    "patient_id": "PAT-TWIN-022",
+    "age": 33,
+    "sex": "Male",
+    "genetic_status": "GLA mutation positive",
+    "phenotypes": [
+      "neuropathic pain",
+      "corneal opacity",
+      "left ventricular hypertrophy",
+      "proteinuria"
+    ],
+    "hpo_codes": [
+      "HP:0001903",
+      "HP:0001131",
+      "HP:0001712",
+      "HP:0000093"
+    ],
+    "labs": {
+      "eGFR": 107.3,
+      "creatinine": 1.11
+    },
+    "medications": [
+      "agalsidase beta"
+    ],
+    "ert_duration_months": 20
+  },
+  {
+    "patient_id": "PAT-TWIN-023",
+    "age": 55,
+    "sex": "Male",
+    "genetic_status": "GLA mutation positive",
+    "phenotypes": [
+      "angiokeratoma",
+      "corneal opacity",
+      "renal impairment",
+      "proteinuria"
+    ],
+    "hpo_codes": [
+      "HP:0001014",
+      "HP:0001131",
+      "HP:0012211",
+      "HP:0000093"
+    ],
+    "labs": {
+      "eGFR": 18.8,
+      "creatinine": 2.52
+    },
+    "medications": [
+      "agalsidase beta"
+    ],
+    "ert_duration_months": 22
+  },
+  {
+    "patient_id": "PAT-TWIN-024",
+    "age": 65,
+    "sex": "Female",
+    "genetic_status": "GLA mutation positive",
+    "phenotypes": [
+      "neuropathic pain",
+      "corneal opacity",
+      "hypohidrosis",
+      "renal impairment",
+      "left ventricular hypertrophy",
+      "proteinuria"
+    ],
+    "hpo_codes": [
+      "HP:0001903",
+      "HP:0001131",
+      "HP:0000966",
+      "HP:0012211",
+      "HP:0001712",
+      "HP:0000093"
+    ],
+    "labs": {
+      "eGFR": 27.8,
+      "creatinine": 2.62
+    },
+    "medications": [
+      "agalsidase beta"
+    ],
+    "ert_duration_months": 30
+  },
+  {
+    "patient_id": "PAT-TWIN-025",
+    "age": 53,
+    "sex": "Female",
+    "genetic_status": "GLA mutation positive",
+    "phenotypes": [
+      "neuropathic pain",
+      "angiokeratoma",
+      "corneal opacity",
+      "hypohidrosis",
+      "left ventricular hypertrophy",
+      "proteinuria"
+    ],
+    "hpo_codes": [
+      "HP:0001903",
+      "HP:0001014",
+      "HP:0001131",
+      "HP:0000966",
+      "HP:0001712",
+      "HP:0000093"
+    ],
+    "labs": {
+      "eGFR": 80.0,
+      "creatinine": 1.06
+    },
+    "medications": [
+      "agalsidase beta"
+    ],
+    "ert_duration_months": 30
+  },
+  {
+    "patient_id": "PAT-TWIN-026",
+    "age": 57,
+    "sex": "Male",
+    "genetic_status": "GLA mutation positive",
+    "phenotypes": [
+      "neuropathic pain",
+      "corneal opacity",
+      "hypohidrosis",
+      "proteinuria"
+    ],
+    "hpo_codes": [
+      "HP:0001903",
+      "HP:0001131",
+      "HP:0000966",
+      "HP:0000093"
+    ],
+    "labs": {
+      "eGFR": 70.2,
+      "creatinine": 0.99
+    },
+    "medications": [],
+    "ert_duration_months": 0
+  },
+  {
+    "patient_id": "PAT-TWIN-027",
+    "age": 58,
+    "sex": "Female",
+    "genetic_status": "GLA mutation positive",
+    "phenotypes": [
+      "angiokeratoma",
+      "hypohidrosis"
+    ],
+    "hpo_codes": [
+      "HP:0001014",
+      "HP:0000966"
+    ],
+    "labs": {
+      "eGFR": 80.4,
+      "creatinine": 0.95
+    },
+    "medications": [
+      "agalsidase beta"
+    ],
+    "ert_duration_months": 16
+  },
+  {
+    "patient_id": "PAT-TWIN-028",
+    "age": 24,
+    "sex": "Female",
+    "genetic_status": "GLA mutation positive",
+    "phenotypes": [
+      "angiokeratoma",
+      "corneal opacity",
+      "hypohidrosis",
+      "renal impairment",
+      "proteinuria"
+    ],
+    "hpo_codes": [
+      "HP:0001014",
+      "HP:0001131",
+      "HP:0000966",
+      "HP:0012211",
+      "HP:0000093"
+    ],
+    "labs": {
+      "eGFR": 39.0,
+      "creatinine": 1.69
+    },
+    "medications": [
+      "agalsidase beta"
+    ],
+    "ert_duration_months": 27
+  },
+  {
+    "patient_id": "PAT-TWIN-029",
+    "age": 47,
+    "sex": "Male",
+    "genetic_status": "GLA mutation positive",
+    "phenotypes": [
+      "neuropathic pain",
+      "angiokeratoma",
+      "hypohidrosis",
+      "renal impairment",
+      "proteinuria"
+    ],
+    "hpo_codes": [
+      "HP:0001903",
+      "HP:0001014",
+      "HP:0000966",
+      "HP:0012211",
+      "HP:0000093"
+    ],
+    "labs": {
+      "eGFR": 22.8,
+      "creatinine": 1.8
+    },
+    "medications": [
+      "agalsidase beta"
+    ],
+    "ert_duration_months": 16
+  },
+  {
+    "patient_id": "PAT-TWIN-030",
+    "age": 23,
+    "sex": "Female",
+    "genetic_status": "GLA mutation positive",
+    "phenotypes": [
+      "neuropathic pain",
+      "angiokeratoma",
+      "renal impairment",
+      "proteinuria"
+    ],
+    "hpo_codes": [
+      "HP:0001903",
+      "HP:0001014",
+      "HP:0012211",
+      "HP:0000093"
+    ],
+    "labs": {
+      "eGFR": 24.7,
+      "creatinine": 2.19
+    },
+    "medications": [
+      "agalsidase beta"
+    ],
+    "ert_duration_months": 32
+  },
+  {
+    "patient_id": "PAT-TWIN-031",
+    "age": 34,
+    "sex": "Male",
+    "genetic_status": "GLA mutation positive",
+    "phenotypes": [
+      "angiokeratoma",
+      "hypohidrosis",
+      "left ventricular hypertrophy"
+    ],
+    "hpo_codes": [
+      "HP:0001014",
+      "HP:0000966",
+      "HP:0001712"
+    ],
+    "labs": {
+      "eGFR": 95.6,
+      "creatinine": 0.76
+    },
+    "medications": [
+      "agalsidase beta"
+    ],
+    "ert_duration_months": 7
+  },
+  {
+    "patient_id": "PAT-TWIN-032",
+    "age": 39,
+    "sex": "Male",
+    "genetic_status": "GLA mutation positive",
+    "phenotypes": [
+      "neuropathic pain",
+      "angiokeratoma",
+      "hypohidrosis",
+      "proteinuria"
+    ],
+    "hpo_codes": [
+      "HP:0001903",
+      "HP:0001014",
+      "HP:0000966",
+      "HP:0000093"
+    ],
+    "labs": {
+      "eGFR": 91.6,
+      "creatinine": 1.17
+    },
+    "medications": [
+      "agalsidase beta"
+    ],
+    "ert_duration_months": 7
+  },
+  {
+    "patient_id": "PAT-TWIN-033",
+    "age": 29,
+    "sex": "Female",
+    "genetic_status": "GLA mutation positive",
+    "phenotypes": [
+      "neuropathic pain",
+      "angiokeratoma",
+      "corneal opacity",
+      "hypohidrosis",
+      "proteinuria"
+    ],
+    "hpo_codes": [
+      "HP:0001903",
+      "HP:0001014",
+      "HP:0001131",
+      "HP:0000966",
+      "HP:0000093"
+    ],
+    "labs": {
+      "eGFR": 83.2,
+      "creatinine": 0.74
+    },
+    "medications": [
+      "agalsidase beta"
+    ],
+    "ert_duration_months": 30
+  },
+  {
+    "patient_id": "PAT-TWIN-034",
+    "age": 26,
+    "sex": "Male",
+    "genetic_status": "GLA mutation positive",
+    "phenotypes": [
+      "neuropathic pain",
+      "angiokeratoma",
+      "hypohidrosis",
+      "renal impairment",
+      "left ventricular hypertrophy"
+    ],
+    "hpo_codes": [
+      "HP:0001903",
+      "HP:0001014",
+      "HP:0000966",
+      "HP:0012211",
+      "HP:0001712"
+    ],
+    "labs": {
+      "eGFR": 19.2,
+      "creatinine": 2.63
+    },
+    "medications": [
+      "agalsidase beta"
+    ],
+    "ert_duration_months": 23
+  },
+  {
+    "patient_id": "PAT-TWIN-035",
+    "age": 42,
+    "sex": "Male",
+    "genetic_status": "GLA mutation positive",
+    "phenotypes": [
+      "neuropathic pain",
+      "corneal opacity",
+      "hypohidrosis",
+      "renal impairment"
+    ],
+    "hpo_codes": [
+      "HP:0001903",
+      "HP:0001131",
+      "HP:0000966",
+      "HP:0012211"
+    ],
+    "labs": {
+      "eGFR": 16.8,
+      "creatinine": 2.28
+    },
+    "medications": [
+      "agalsidase beta"
+    ],
+    "ert_duration_months": 24
+  },
+  {
+    "patient_id": "PAT-TWIN-036",
+    "age": 53,
+    "sex": "Female",
+    "genetic_status": "GLA mutation positive",
+    "phenotypes": [
+      "corneal opacity",
+      "hypohidrosis"
+    ],
+    "hpo_codes": [
+      "HP:0001131",
+      "HP:0000966"
+    ],
+    "labs": {
+      "eGFR": 93.3,
+      "creatinine": 1.2
+    },
+    "medications": [
+      "agalsidase beta"
+    ],
+    "ert_duration_months": 14
+  },
+  {
+    "patient_id": "PAT-TWIN-037",
+    "age": 44,
+    "sex": "Female",
+    "genetic_status": "GLA mutation positive",
+    "phenotypes": [
+      "neuropathic pain",
+      "hypohidrosis",
+      "renal impairment",
+      "proteinuria"
+    ],
+    "hpo_codes": [
+      "HP:0001903",
+      "HP:0000966",
+      "HP:0012211",
+      "HP:0000093"
+    ],
+    "labs": {
+      "eGFR": 33.1,
+      "creatinine": 2.81
+    },
+    "medications": [
+      "agalsidase beta"
+    ],
+    "ert_duration_months": 24
+  },
+  {
+    "patient_id": "PAT-TWIN-038",
+    "age": 58,
+    "sex": "Male",
+    "genetic_status": "GLA mutation positive",
+    "phenotypes": [
+      "neuropathic pain",
+      "angiokeratoma",
+      "corneal opacity",
+      "hypohidrosis",
+      "renal impairment",
+      "proteinuria"
+    ],
+    "hpo_codes": [
+      "HP:0001903",
+      "HP:0001014",
+      "HP:0001131",
+      "HP:0000966",
+      "HP:0012211",
+      "HP:0000093"
+    ],
+    "labs": {
+      "eGFR": 36.2,
+      "creatinine": 2.25
+    },
+    "medications": [
+      "agalsidase beta"
+    ],
+    "ert_duration_months": 7
+  },
+  {
+    "patient_id": "PAT-TWIN-039",
+    "age": 55,
+    "sex": "Male",
+    "genetic_status": "GLA mutation positive",
+    "phenotypes": [
+      "neuropathic pain",
+      "angiokeratoma",
+      "corneal opacity",
+      "renal impairment"
+    ],
+    "hpo_codes": [
+      "HP:0001903",
+      "HP:0001014",
+      "HP:0001131",
+      "HP:0012211"
+    ],
+    "labs": {
+      "eGFR": 28.2,
+      "creatinine": 2.15
+    },
+    "medications": [
+      "agalsidase beta"
+    ],
+    "ert_duration_months": 28
+  },
+  {
+    "patient_id": "PAT-TWIN-040",
+    "age": 20,
+    "sex": "Female",
+    "genetic_status": "GLA mutation positive",
+    "phenotypes": [
+      "neuropathic pain",
+      "corneal opacity",
+      "left ventricular hypertrophy",
+      "proteinuria"
+    ],
+    "hpo_codes": [
+      "HP:0001903",
+      "HP:0001131",
+      "HP:0001712",
+      "HP:0000093"
+    ],
+    "labs": {
+      "eGFR": 77.5,
+      "creatinine": 1.03
+    },
+    "medications": [
+      "agalsidase beta"
+    ],
+    "ert_duration_months": 3
+  },
+  {
+    "patient_id": "PAT-TWIN-041",
+    "age": 56,
+    "sex": "Female",
+    "genetic_status": "GLA mutation positive",
+    "phenotypes": [
+      "corneal opacity",
+      "renal impairment",
+      "left ventricular hypertrophy"
+    ],
+    "hpo_codes": [
+      "HP:0001131",
+      "HP:0012211",
+      "HP:0001712"
+    ],
+    "labs": {
+      "eGFR": 21.5,
+      "creatinine": 2.6
+    },
+    "medications": [],
+    "ert_duration_months": 0
+  },
+  {
+    "patient_id": "PAT-TWIN-042",
+    "age": 20,
+    "sex": "Female",
+    "genetic_status": "GLA mutation positive",
+    "phenotypes": [
+      "neuropathic pain",
+      "angiokeratoma",
+      "corneal opacity",
+      "hypohidrosis",
+      "renal impairment",
+      "proteinuria"
+    ],
+    "hpo_codes": [
+      "HP:0001903",
+      "HP:0001014",
+      "HP:0001131",
+      "HP:0000966",
+      "HP:0012211",
+      "HP:0000093"
+    ],
+    "labs": {
+      "eGFR": 17.6,
+      "creatinine": 2.62
+    },
+    "medications": [
+      "agalsidase beta"
+    ],
+    "ert_duration_months": 28
+  },
+  {
+    "patient_id": "PAT-TWIN-043",
+    "age": 37,
+    "sex": "Male",
+    "genetic_status": "GLA mutation positive",
+    "phenotypes": [
+      "neuropathic pain",
+      "angiokeratoma",
+      "corneal opacity",
+      "renal impairment",
+      "left ventricular hypertrophy",
+      "proteinuria"
+    ],
+    "hpo_codes": [
+      "HP:0001903",
+      "HP:0001014",
+      "HP:0001131",
+      "HP:0012211",
+      "HP:0001712",
+      "HP:0000093"
+    ],
+    "labs": {
+      "eGFR": 20.3,
+      "creatinine": 1.78
+    },
+    "medications": [
+      "agalsidase beta"
+    ],
+    "ert_duration_months": 31
+  },
+  {
+    "patient_id": "PAT-TWIN-044",
+    "age": 20,
+    "sex": "Female",
+    "genetic_status": "GLA mutation positive",
+    "phenotypes": [
+      "neuropathic pain",
+      "angiokeratoma",
+      "corneal opacity",
+      "hypohidrosis",
+      "proteinuria"
+    ],
+    "hpo_codes": [
+      "HP:0001903",
+      "HP:0001014",
+      "HP:0001131",
+      "HP:0000966",
+      "HP:0000093"
+    ],
+    "labs": {
+      "eGFR": 81.9,
+      "creatinine": 0.71
+    },
+    "medications": [],
+    "ert_duration_months": 0
+  },
+  {
+    "patient_id": "PAT-TWIN-045",
+    "age": 43,
+    "sex": "Male",
+    "genetic_status": "GLA mutation positive",
+    "phenotypes": [
+      "hypohidrosis",
+      "renal impairment",
+      "left ventricular hypertrophy"
+    ],
+    "hpo_codes": [
+      "HP:0000966",
+      "HP:0012211",
+      "HP:0001712"
+    ],
+    "labs": {
+      "eGFR": 38.2,
+      "creatinine": 1.92
+    },
+    "medications": [
+      "agalsidase beta"
+    ],
+    "ert_duration_months": 28
+  },
+  {
+    "patient_id": "PAT-TWIN-046",
+    "age": 52,
+    "sex": "Female",
+    "genetic_status": "GLA mutation positive",
+    "phenotypes": [
+      "neuropathic pain",
+      "angiokeratoma",
+      "corneal opacity",
+      "hypohidrosis",
+      "renal impairment",
+      "left ventricular hypertrophy",
+      "proteinuria"
+    ],
+    "hpo_codes": [
+      "HP:0001903",
+      "HP:0001014",
+      "HP:0001131",
+      "HP:0000966",
+      "HP:0012211",
+      "HP:0001712",
+      "HP:0000093"
+    ],
+    "labs": {
+      "eGFR": 17.5,
+      "creatinine": 1.68
+    },
+    "medications": [],
+    "ert_duration_months": 0
+  },
+  {
+    "patient_id": "PAT-TWIN-047",
+    "age": 19,
+    "sex": "Male",
+    "genetic_status": "GLA mutation positive",
+    "phenotypes": [
+      "angiokeratoma",
+      "corneal opacity",
+      "hypohidrosis",
+      "renal impairment",
+      "left ventricular hypertrophy",
+      "proteinuria"
+    ],
+    "hpo_codes": [
+      "HP:0001014",
+      "HP:0001131",
+      "HP:0000966",
+      "HP:0012211",
+      "HP:0001712",
+      "HP:0000093"
+    ],
+    "labs": {
+      "eGFR": 39.4,
+      "creatinine": 1.81
+    },
+    "medications": [
+      "agalsidase beta"
+    ],
+    "ert_duration_months": 21
+  },
+  {
+    "patient_id": "PAT-TWIN-048",
+    "age": 46,
+    "sex": "Male",
+    "genetic_status": "GLA mutation positive",
+    "phenotypes": [
+      "neuropathic pain",
+      "hypohidrosis",
+      "renal impairment",
+      "proteinuria"
+    ],
+    "hpo_codes": [
+      "HP:0001903",
+      "HP:0000966",
+      "HP:0012211",
+      "HP:0000093"
+    ],
+    "labs": {
+      "eGFR": 21.0,
+      "creatinine": 1.69
+    },
+    "medications": [
+      "agalsidase beta"
+    ],
+    "ert_duration_months": 30
+  },
+  {
+    "patient_id": "PAT-TWIN-049",
+    "age": 47,
+    "sex": "Male",
+    "genetic_status": "GLA mutation positive",
+    "phenotypes": [
+      "neuropathic pain",
+      "angiokeratoma",
+      "corneal opacity",
+      "hypohidrosis",
+      "renal impairment",
+      "left ventricular hypertrophy",
+      "proteinuria"
+    ],
+    "hpo_codes": [
+      "HP:0001903",
+      "HP:0001014",
+      "HP:0001131",
+      "HP:0000966",
+      "HP:0012211",
+      "HP:0001712",
+      "HP:0000093"
+    ],
+    "labs": {
+      "eGFR": 43.8,
+      "creatinine": 1.73
+    },
+    "medications": [
+      "agalsidase beta"
+    ],
+    "ert_duration_months": 4
+  },
+  {
+    "patient_id": "PAT-TWIN-050",
+    "age": 59,
+    "sex": "Male",
+    "genetic_status": "GLA mutation positive",
+    "phenotypes": [
+      "neuropathic pain",
+      "angiokeratoma",
+      "hypohidrosis",
+      "renal impairment",
+      "proteinuria"
+    ],
+    "hpo_codes": [
+      "HP:0001903",
+      "HP:0001014",
+      "HP:0000966",
+      "HP:0012211",
+      "HP:0000093"
+    ],
+    "labs": {
+      "eGFR": 21.1,
+      "creatinine": 3.16
+    },
+    "medications": [],
+    "ert_duration_months": 0
+  }
+]

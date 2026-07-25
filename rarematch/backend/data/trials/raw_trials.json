@@ -1,0 +1,42 @@
+{
+  "studies": [
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT04999866",
+          "briefTitle": "A Clinical Trial to Evaluate the Safety and Efficacy of Migalastat in Patients with Fabry Disease"
+        },
+        "statusModule": {
+          "overallStatus": "RECRUITING"
+        },
+        "eligibilityModule": {
+          "eligibilityCriteria": "Inclusion Criteria:\n1. Documented clinical diagnosis of Fabry disease (GLA mutation status confirmed).\n2. Male or female aged 18 years or older.\n3. Estimated glomerular filtration rate (eGFR) >= 30 mL/min/1.73 m2.\n4. On stable enzyme replacement therapy (ERT) for at least 12 months prior to screening.\n\nExclusion Criteria:\n1. History of kidney transplantation or currently receiving dialysis.\n2. History of stroke or transient ischemic attack (TIA) within the last 6 months.\n3. Pregnant or breastfeeding female.\n4. Known hypersensitivity or allergy to migalastat or its excipients."
+        },
+        "sponsorModule": {
+          "leadSponsor": {
+            "name": "Amicus Therapeutics"
+          }
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT05123456",
+          "briefTitle": "A Phase 1/2 Study of Gene Therapy (FLT190) in Patients with Fabry Disease"
+        },
+        "statusModule": {
+          "overallStatus": "RECRUITING"
+        },
+        "eligibilityModule": {
+          "eligibilityCriteria": "Inclusion Criteria:\n1. Male patients aged 18 to 50 years.\n2. Confirmed diagnosis of classic Fabry disease (GLA activity < 1% of normal).\n3. eGFR >= 45 mL/min/1.73 m2.\n4. High Lyso-Gb3 levels at screening.\n\nExclusion Criteria:\n1. Presence of neutralizing antibodies to AAV2/6 capsid.\n2. History of stroke, heart failure, or severe cardiac hypertrophy.\n3. Severe kidney disease or dialysis."
+        },
+        "sponsorModule": {
+          "leadSponsor": {
+            "name": "Freeline Therapeutics"
+          }
+        }
+      }
+    }
+  ]
+}

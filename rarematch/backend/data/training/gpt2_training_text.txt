@@ -1,0 +1,158 @@
+<|startoftext|>
+DISEASE: Fabry Disease
+SUMMARY: Palm-Plant Pain, Sign of a Severe Systemic Disease? Case Report and Review of Literature.
+CLINICAL NOTE:
+PHYSICIAN DISCHARGE SUMMARY - PATENT REF: PMID-36833443
+==================================================
+ADMISSION DIAGNOSIS / TITLE: Palm-Plant Pain, Sign of a Severe Systemic Disease? Case Report and Review of Literature.
+
+CLINICAL PRESENTATION & HISTORY:
+Fabry disease is an X-linked lysosomal storage disease, second in prevalence after Gaucher disease. The onset of symptoms occurs in childhood or adolescence with palmo-plantar burning pains, hypo hidrosis, angiokeratomas, and corneal deposits. In the absence of diagnosis and treatment, the disease will progress to the late phase, characterized by progressive cardiac, cerebral and renal damage, and possible death. We present the case of an 11-year-old male boy who was transferred to the Pediatric Nephrology Department for palmo-plantar burning pain and end stage renal disease. Following the evaluations for the etiology of end stage renal disease we excluded the vasculitis, the neurologic diseases, extrapulmonary tuberculosis. Because of suggestive aspect at CT scan and lack of etiologic diagnosis of renal insufficiency we performed lymph node and kidney biopsy, with a surprising result for storage disease. The specific investigation confirmed the diagnosis.
+
+<|endoftext|>
+
+<|startoftext|>
+DISEASE: Fabry Disease
+SUMMARY: An Unusual Case of Anderson-Fabry Disease: Case Report.
+CLINICAL NOTE:
+PHYSICIAN DISCHARGE SUMMARY - PATENT REF: PMID-38227354
+==================================================
+ADMISSION DIAGNOSIS / TITLE: An Unusual Case of Anderson-Fabry Disease: Case Report.
+
+CLINICAL PRESENTATION & HISTORY:
+Angiokeratoma is a group of capillary malformations characterized by the formation of variably sized dark red hyperkeratotic papules. Initially, it was believed that angiokeratoma corporis diffusum was a telltale sign of Anderson-Fabry disease; however, current consensus states that it is also seen in various other lysosomal enzymatic deficiencies. In this report, we present the case of a 12-year-old boy who developed angiokeratoma corporis diffusum with sensorineural deafness, acroparesthesias, and renal involvement.
+
+<|endoftext|>
+
+<|startoftext|>
+DISEASE: Fabry Disease
+SUMMARY: Ventricular tachycardia: a presentation of Fabry disease case report.
+CLINICAL NOTE:
+PHYSICIAN DISCHARGE SUMMARY - PATENT REF: PMID-31020230
+==================================================
+ADMISSION DIAGNOSIS / TITLE: Ventricular tachycardia: a presentation of Fabry disease case report.
+
+CLINICAL PRESENTATION & HISTORY:
+BACKGROUND: Fabry disease is an inherited rare metabolic disease caused by mutation in the GLA gene, encoding lysosomal enzyme alpha-galactosidase A. The disorder is a systemic disease that manifests as cerebrovascular and cardiac disease, chronic renal failure, skin lesion, peripheral neuropathy, and other abnormalities. Ventricular tachycardia as a Fabry disease presentation is very rare.
+CASE SUMMARY: A 36-year-old man self-presented to a general practitioner complaining of episodes of shortness of breath together with a 6-month history of malaise. The 12-lead electrocardiogram (ECG) prompted a decision to transfer him immediately to a percutaneous coronary intervention (PCI) capable hospital under the suspicion of acute coronary syndrome. Whilst awaiting transport, he experienced acute onset of dyspnoea together with non-specific chest heaviness. A repeat ECG monitor strip showed ventricular tachycardia transforming to ventricular fibrillation. The patient was successfully defibrillated. Coronary angiography was performed upon arrival at hospital and demonstrated unobstructed coronary arteries. Transthoracic echocardiography revealed concentric left ventricular hypertrophy (LVH) and normal systolic function, with severe diastolic dysfunction. Magnetic resonance imaging (MRI) confirmed the LVH, and did not demonstrate any late gadolinium enhancement.
+DISCUSSION: Our case illustrates the pivotal role of critical clinical thinking in the diagnosis of rare but treatable hereditary cardiomyopathy. The uncommon cardiac presentation of Fabry disease promotes further research linking different phenotypes of Fabry disease with different pathogenic mutations.
+
+<|endoftext|>
+
+<|startoftext|>
+DISEASE: Fabry Disease
+SUMMARY: ANGIOKERATOMA CORPORIS DIFFUSUM UNIVERSALE: FABRY'S DISEASE; CASE REPORT AND REVIEW OF THE LITERATURE.
+CLINICAL NOTE:
+PHYSICIAN DISCHARGE SUMMARY - PATENT REF: PMID-14211596
+==================================================
+ADMISSION DIAGNOSIS / TITLE: ANGIOKERATOMA CORPORIS DIFFUSUM UNIVERSALE: FABRY'S DISEASE; CASE REPORT AND REVIEW OF THE LITERATURE.
+
+CLINICAL PRESENTATION & HISTORY:
+No Abstract Available
+
+<|endoftext|>
+
+<|startoftext|>
+DISEASE: Fabry Disease
+SUMMARY: Recurrent arterial thrombosis in a patient with Fabry disease: case report.
+CLINICAL NOTE:
+PHYSICIAN DISCHARGE SUMMARY - PATENT REF: PMID-32499824
+==================================================
+ADMISSION DIAGNOSIS / TITLE: Recurrent arterial thrombosis in a patient with Fabry disease: case report.
+
+CLINICAL PRESENTATION & HISTORY:
+Fabry disease is a rare disease, defined as an X-linked lysosomal deposition disease that presents with multisystemic symptoms, including vascular impairment with thrombotic events. A 57-year-old female patient diagnosed with Fabry disease 11 years previously, presented with hyperhidrosis, hypoacusis, and angiokeratoma on the hands. Her previous pathological history included an episode of ischemic stroke before the age of 40 years and chronic acute thrombosis in the right lower limb, 1 year previously, which had been treated with stent angioplasty, with temporary improvement followed by recent relapse of the condition. Thrombotic events fit the typical symptoms of Fabry disease and are caused by deposition of globotriaosylceramide in the vascular endothelium, constituting a prothrombotic state and explaining the recurrence of symptoms and arterial thrombosis in the lower limb.
+
+<|endoftext|>
+
+<|startoftext|>
+DISEASE: Fabry Disease
+SUMMARY: Diffuse angiokeratoma (Fabry's disease): Case report.
+CLINICAL NOTE:
+PHYSICIAN DISCHARGE SUMMARY - PATENT REF: PMID-817232
+==================================================
+ADMISSION DIAGNOSIS / TITLE: Diffuse angiokeratoma (Fabry's disease): Case report.
+
+CLINICAL PRESENTATION & HISTORY:
+No Abstract Available
+
+<|endoftext|>
+
+<|startoftext|>
+DISEASE: Fabry Disease
+SUMMARY: Unusual case of subarachnoid haemorrhage in patient with Fabry's disease: case report and literature review.
+CLINICAL NOTE:
+PHYSICIAN DISCHARGE SUMMARY - PATENT REF: PMID-22761201
+==================================================
+ADMISSION DIAGNOSIS / TITLE: Unusual case of subarachnoid haemorrhage in patient with Fabry's disease: case report and literature review.
+
+CLINICAL PRESENTATION & HISTORY:
+Fabry's disease is a rare, X linked recessive disease affecting 1 in 40 000 persons. The symptoms result from a lack of or a non-functioning enzyme α galactosidase, which leads to globotriaosylceramide accumulation in the walls of blood vessels. Mortality is generally from cardiac or renal complications and death from subarachnoid haemorrhage is distinctly rare. The authors report a man with Fabry's disease who died after subarachnoid haemorrhage from a progressively enlarging fusiform basilar aneurysm.
+
+<|endoftext|>
+
+<|startoftext|>
+DISEASE: Fabry Disease
+SUMMARY: Fabry disease: case report with emphasis on enzyme replacement therapy and possible future therapeutic options.
+CLINICAL NOTE:
+PHYSICIAN DISCHARGE SUMMARY - PATENT REF: PMID-17610610
+==================================================
+ADMISSION DIAGNOSIS / TITLE: Fabry disease: case report with emphasis on enzyme replacement therapy and possible future therapeutic options.
+
+CLINICAL PRESENTATION & HISTORY:
+A 38-year-old male Caucasian with Fabry disease presented with angiokeratomas and tortuous conjunctival and retinal vessels. Additionally, the patient showed characteristic skin lesions of psoriasis and seborrheic dermatitis. His past medical history revealed anhidrosis, acral paresthesias, myocardial infarction, phlebothrombosis, hypertension, antithrombin III deficiency, factor V Leiden disease, chronic obstructive lung disease, tinnitus, diarrhea, recurrent abdominal pain, headache, and depressive mood. He was treated with intravenous substitution of the deficient enzyme alpha-galactosidase A. Possible future options in treatment of Fabry disease are discussed.
+
+<|endoftext|>
+
+<|startoftext|>
+DISEASE: Fabry Disease
+SUMMARY: Chloroquine-induced phospholipidosis of the kidney mimicking Fabry's disease: case report and review of the literature.
+CLINICAL NOTE:
+PHYSICIAN DISCHARGE SUMMARY - PATENT REF: PMID-12673565
+==================================================
+ADMISSION DIAGNOSIS / TITLE: Chloroquine-induced phospholipidosis of the kidney mimicking Fabry's disease: case report and review of the literature.
+
+CLINICAL PRESENTATION & HISTORY:
+A 46-year-old female patient with Sjögren's syndrome, hypertension, and stable chronic renal insufficiency (creatinine [CR], 1.9 to 2.1 mg/dL) had a progressive worsening of renal function (CR, 5.0 mg/dL) after 11 months of chloroquine therapy (155 mg/day; cumulative dose of approximately 51 g). Light microscopy revealed nonspecific angionephrosclerosis. Electron microscopy showed accumulations of lamellated myelinoid material and occasionally also of curvilinear bodies, especially in the glomerular podocytes and to a lesser extent in vascular myothelial and endothelial cells. In the tubular system, mainly protein droplets were stored. Activity of alpha-galactosidase A was normal in isolated leukocytes (56 nmol/mg; range, 33.2 to 109 nmol/mg), ruling out Fabry's disease. Clinical, morphological, and biochemical findings were consistent with chloroquine-associated deterioration of renal function that improved considerably after discontinuation of chloroquine treatment. Adverse effects of chloroquine may aggravate preexisting renal disease. Electron microscopy is a worthwhile tool for establishing the correct diagnosis.
+
+<|endoftext|>
+
+<|startoftext|>
+DISEASE: Fabry Disease
+SUMMARY: [Cornea verticillata - a clinical marker of Fabry disease: case report].
+CLINICAL NOTE:
+PHYSICIAN DISCHARGE SUMMARY - PATENT REF: PMID-17906770
+==================================================
+ADMISSION DIAGNOSIS / TITLE: [Cornea verticillata - a clinical marker of Fabry disease: case report].
+
+CLINICAL PRESENTATION & HISTORY:
+Fabry's disease is a rare X-linked lysosomal storage disorder of glycosphingolipid (GL) metabolism, caused by a deficiency of alpha-galactosidase A activity. The progressive accumulation of GL in tissues results in the clinical manifestations of the disease, that are more evident in hemizygous males, and include angiokeratomas, acroparesthesia, cornea verticillata, cardiac and kidney involvement, cerebrovascular manifestations. A family with Fabry's disease including 2 female patients and 3 male patients is reported. The patients were submitted to complete medical history, ophthalmological examination and alpha-galactosidase activity test. Cornea verticillata was a constant finding in all patients. This demonstrates the important role of the ophtalmological examination for the diagnosis of Fabry's disease since the eye findings are so characteristic of the disease.
+
+<|endoftext|>
+
+<|startoftext|>
+DISEASE: Fabry Disease
+SUMMARY: [Fabry's disease--case report and treatment of painful crises by carbamazepine].
+CLINICAL NOTE:
+PHYSICIAN DISCHARGE SUMMARY - PATENT REF: PMID-4737463
+==================================================
+ADMISSION DIAGNOSIS / TITLE: [Fabry's disease--case report and treatment of painful crises by carbamazepine].
+
+CLINICAL PRESENTATION & HISTORY:
+No Abstract Available
+
+<|endoftext|>
+
+<|startoftext|>
+DISEASE: Fabry Disease
+SUMMARY: [Cornea verticillata--a clinical marker of Fabry disease: case report].
+CLINICAL NOTE:
+PHYSICIAN DISCHARGE SUMMARY - PATENT REF: PMID-18516439
+==================================================
+ADMISSION DIAGNOSIS / TITLE: [Cornea verticillata--a clinical marker of Fabry disease: case report].
+
+CLINICAL PRESENTATION & HISTORY:
+No Abstract Available
+
+<|endoftext|>
+

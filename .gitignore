@@ -1,0 +1,33 @@
+# Node
+node_modules/
+dist/
+build/
+.npm/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+
+# Environment variables
+.env
+.env.local
+
+# Databases and Models
+*.sqlite3
+vector_db/
+models/
+gpt2_patient_twin/
+biobert_clinical_ner/
+*checkpoint*/
+
+# IDEs and OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

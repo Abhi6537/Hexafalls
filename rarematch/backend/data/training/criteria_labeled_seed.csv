@@ -1,0 +1,51 @@
+text,label
+Age >= 18 years,NUMERIC
+Aged 18 to 65 years,NUMERIC
+eGFR >= 30 mL/min/1.73 m2,NUMERIC
+eGFR < 30 ml/min,NUMERIC
+Weight >= 50 kg,NUMERIC
+Glomerular filtration rate between 30 and 90,NUMERIC
+Body mass index under 35,NUMERIC
+"Platelet count greater than 100,000",NUMERIC
+Systolic blood pressure under 140 mmHg,NUMERIC
+Hemoglobin level >= 10 g/dL,NUMERIC
+Stable on ERT for at least 12 months,TEMPORAL
+On ERT therapy for 2 years or longer,TEMPORAL
+Stroke or TIA within the last 6 months,TEMPORAL
+Myocardial infarction within past 180 days,TEMPORAL
+No change in dosage for 6 months,TEMPORAL
+Diagnosed within past 3 years,TEMPORAL
+Organ transplant within past 12 months,TEMPORAL
+Symptoms presenting for at least 6 months,TEMPORAL
+Receiving enzyme therapy for over 1 year,TEMPORAL
+No major surgery within 30 days,TEMPORAL
+Documented clinical diagnosis of Fabry disease,CATEGORICAL
+Confirmed GLA gene mutation,CATEGORICAL
+Male or female patients,CATEGORICAL
+Female of childbearing potential,CATEGORICAL
+Male patients only,CATEGORICAL
+History of kidney transplantation,CATEGORICAL
+Currently receiving dialysis,CATEGORICAL
+Active hepatitis B or C infection,CATEGORICAL
+Presence of neutralizing antibodies to AAV capsid,CATEGORICAL
+Known GLA mutation mutation positive status,CATEGORICAL
+Neuropathic pain in hands and feet,QUALITATIVE
+Severe cardiac hypertrophy,QUALITATIVE
+Recurrent burning extremity pain,QUALITATIVE
+Chronic fatigue or joint pain,QUALITATIVE
+History of severe allergic reactions,QUALITATIVE
+Heart failure class III or IV,QUALITATIVE
+Corneal opacity or verticillata,QUALITATIVE
+Angiokeratoma on torso or extremities,QUALITATIVE
+Uncontrolled cardiovascular disease,QUALITATIVE
+Any medical condition compromising safety,QUALITATIVE
+Aged under 18 years,NUMERIC
+eGFR >= 45,NUMERIC
+Duration of therapy >= 12 months,TEMPORAL
+History of stroke within 6 months,TEMPORAL
+Classic Fabry disease diagnosis,CATEGORICAL
+Renal transplantation history,CATEGORICAL
+Known hypersensitivity to migalastat,CATEGORICAL
+Corneal verticillata,QUALITATIVE
+Severe gastrointestinal symptoms,QUALITATIVE
+Hypohidrosis or anhidrosis,QUALITATIVE
