@@ -52,6 +52,17 @@ GOOGLE_API_KEY     = os.getenv("GOOGLE_API_KEY", "")
 LLM_PROVIDER       = "google"              # "google" (free Gemini API)
 LLM_MODEL          = "gemini-2.0-flash"    # Fast, free, great quality
 
+# ── Supabase Configuration ─────────────────────────────────────────────────────
+SUPABASE_URL = os.getenv("SUPABASE_URL", "")
+SUPABASE_SERVICE_ROLE_KEY = os.getenv("SUPABASE_SERVICE_ROLE_KEY", "")
+
+supabase_client = None
+if SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY:
+    from supabase import create_client, Client
+    supabase_client: Client = create_client(SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY)
+else:
+    print("WARNING: Supabase credentials not found. Database features will be disabled.")
+
 # ── NER Training ───────────────────────────────────────────────────────────────
 NER_EPOCHS        = 3
 NER_BATCH_SIZE    = 16

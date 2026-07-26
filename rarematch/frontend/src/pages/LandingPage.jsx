@@ -34,41 +34,115 @@ export function LandingPage() {
           alignItems: 'center',
           position: 'relative',
           paddingTop: '4rem',
-          paddingBottom: '4rem'
+          paddingBottom: '4rem',
+          overflow: 'hidden'
         }}>
           
           <div className="content-wrapper" style={{ position: 'relative', zIndex: 10 }}>
-            <motion.div 
-              initial="hidden" 
-              animate="visible" 
-              variants={containerVariants}
-              style={{ maxWidth: '900px', margin: '0 auto', textAlign: 'center' }}
-            >
-              <motion.div variants={itemVariants} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '0.75rem', marginBottom: '2rem' }}>
-                <span className="premium-badge">
-                  RareMatch V2.0
-                </span>
-                <span className="text-muted" style={{ fontSize: '0.875rem' }}>Next-Gen Multi-Agent Architecture</span>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))', gap: '4rem', alignItems: 'center' }}>
+              
+              {/* Left Column: Text */}
+              <motion.div 
+                initial="hidden" 
+                animate="visible" 
+                variants={containerVariants}
+                style={{ textAlign: 'left' }}
+              >
+                <motion.div variants={itemVariants} style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '2rem' }}>
+                  <span className="premium-badge">
+                    RareMatch V2.0
+                  </span>
+                  <span className="text-muted" style={{ fontSize: '0.875rem' }}>Next-Gen Multi-Agent Architecture</span>
+                </motion.div>
+                
+                <motion.h1 variants={itemVariants} style={{ fontSize: '4.5rem', fontWeight: 800, lineHeight: 1.05, marginBottom: '1.5rem', letterSpacing: '-0.04em' }}>
+                  Precision matching.<br/>
+                  <span className="text-gradient">Engineered for rare diseases.</span>
+                </motion.h1>
+                
+                <motion.p variants={itemVariants} className="text-muted" style={{ fontSize: '1.25rem', lineHeight: 1.6, marginBottom: '3rem', maxWidth: '550px' }}>
+                  Leverage generative multi-agent systems and semantic phenotyping to instantly connect complex clinical profiles with the right trials. Built for speed, accuracy, and trust.
+                </motion.p>
+                
+                <motion.div variants={itemVariants} style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
+                  <Link to="/dashboard" className="premium-btn premium-btn-primary" style={{ padding: '0.875rem 2rem', fontSize: '1rem' }}>
+                    Launch Dashboard <ArrowRight size={18} />
+                  </Link>
+                  <a href="#how-it-works" className="premium-btn premium-btn-secondary" style={{ padding: '0.875rem 2rem', fontSize: '1rem' }}>
+                    Explore Technology
+                  </a>
+                </motion.div>
               </motion.div>
-              
-              <motion.h1 variants={itemVariants} style={{ fontSize: '5rem', fontWeight: 800, lineHeight: 1.05, marginBottom: '1.5rem', letterSpacing: '-0.04em' }}>
-                Precision matching.<br/>
-                <span className="text-gradient">Engineered for rare diseases.</span>
-              </motion.h1>
-              
-              <motion.p variants={itemVariants} className="text-muted" style={{ fontSize: '1.25rem', lineHeight: 1.6, marginBottom: '3rem', maxWidth: '650px', margin: '0 auto 3rem auto' }}>
-                Leverage generative multi-agent systems and semantic phenotyping to instantly connect complex clinical profiles with the right trials. Built for speed, accuracy, and trust.
-              </motion.p>
-              
-              <motion.div variants={itemVariants} style={{ display: 'flex', gap: '1rem', justifyContent: 'center', alignItems: 'center' }}>
-                <Link to="/dashboard" className="premium-btn premium-btn-primary" style={{ padding: '0.875rem 2rem', fontSize: '1rem' }}>
-                  Launch Dashboard <ArrowRight size={18} />
-                </Link>
-                <a href="#how-it-works" className="premium-btn premium-btn-secondary" style={{ padding: '0.875rem 2rem', fontSize: '1rem' }}>
-                  Explore Technology
-                </a>
+
+              {/* Right Column: Glassmorphism Animation */}
+              <motion.div 
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 1, ease: 'easeOut' }}
+                style={{ position: 'relative', height: '500px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}
+              >
+                {/* Background Glow */}
+                <div style={{ position: 'absolute', width: '300px', height: '300px', background: 'var(--accent-teal)', filter: 'blur(100px)', opacity: 0.2, borderRadius: '50%' }} />
+                <div style={{ position: 'absolute', width: '200px', height: '200px', background: '#3b82f6', filter: 'blur(80px)', opacity: 0.2, borderRadius: '50%', transform: 'translate(50px, -50px)' }} />
+
+                {/* Central Glass Card */}
+                <motion.div 
+                  animate={{ y: [-10, 10, -10] }}
+                  transition={{ repeat: Infinity, duration: 6, ease: 'easeInOut' }}
+                  style={{ 
+                    position: 'relative',
+                    width: '320px', 
+                    height: '400px', 
+                    background: 'rgba(255, 255, 255, 0.03)',
+                    backdropFilter: 'blur(16px)',
+                    WebkitBackdropFilter: 'blur(16px)',
+                    border: '1px solid rgba(255, 255, 255, 0.1)',
+                    borderRadius: '24px',
+                    boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.5)',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    zIndex: 2
+                  }}
+                >
+                  <motion.div
+                    animate={{ rotate: 360 }}
+                    transition={{ repeat: Infinity, duration: 20, ease: 'linear' }}
+                    style={{ marginBottom: '2rem' }}
+                  >
+                    <div style={{ width: '120px', height: '120px', borderRadius: '50%', background: 'rgba(0, 240, 255, 0.1)', border: '1px solid rgba(0, 240, 255, 0.3)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                       <Dna size={48} color="var(--accent-teal)" />
+                    </div>
+                  </motion.div>
+                  
+                  <div style={{ textAlign: 'center', padding: '0 2rem' }}>
+                     <h3 style={{ margin: '0 0 0.5rem 0', fontSize: '1.25rem', color: 'var(--text-primary)' }}>Genomic Parsing Engine</h3>
+                     <p style={{ margin: 0, fontSize: '0.875rem', color: 'var(--text-secondary)' }}>Semantic Phenotype Mapping Active</p>
+                  </div>
+                </motion.div>
+
+                {/* Orbiting Elements */}
+                <motion.div 
+                  animate={{ y: [-5, 5, -5] }}
+                  transition={{ repeat: Infinity, duration: 4, ease: 'easeInOut', delay: 1 }}
+                  style={{ position: 'absolute', top: '10%', right: '5%', zIndex: 3, padding: '0.75rem 1rem', background: 'rgba(16, 185, 129, 0.1)', border: '1px solid rgba(16, 185, 129, 0.3)', backdropFilter: 'blur(8px)', borderRadius: '12px', display: 'flex', alignItems: 'center', gap: '0.5rem' }}
+                >
+                  <ShieldCheck size={16} color="#10b981" />
+                  <span style={{ fontSize: '0.75rem', fontWeight: 600, color: '#10b981' }}>Orphanet Verified</span>
+                </motion.div>
+
+                <motion.div 
+                  animate={{ y: [5, -5, 5] }}
+                  transition={{ repeat: Infinity, duration: 5, ease: 'easeInOut', delay: 2 }}
+                  style={{ position: 'absolute', bottom: '15%', left: '0%', zIndex: 3, padding: '0.75rem 1rem', background: 'rgba(245, 158, 11, 0.1)', border: '1px solid rgba(245, 158, 11, 0.3)', backdropFilter: 'blur(8px)', borderRadius: '12px', display: 'flex', alignItems: 'center', gap: '0.5rem' }}
+                >
+                  <BrainCircuit size={16} color="#f59e0b" />
+                  <span style={{ fontSize: '0.75rem', fontWeight: 600, color: '#f59e0b' }}>Agentic Evaluation</span>
+                </motion.div>
+
               </motion.div>
-            </motion.div>
+            </div>
           </div>
         </section>
 

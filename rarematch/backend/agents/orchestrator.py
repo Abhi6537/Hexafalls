@@ -22,7 +22,7 @@ class Orchestrator:
         self.matching_agent = MatchingAgent()
         self.explainability_agent = ExplainabilityAgent()
         
-    def match_patient_pipeline(self, patient_profile, limit=3):
+    def match_patient_pipeline(self, patient_profile, limit=3, persona="doctor"):
         """
         Runs the full end-to-end multi-agent clinical matching flow.
         1. Retrieval Agent semantic-searches trials.
@@ -32,8 +32,7 @@ class Orchestrator:
         print(f"\nOrchestrator: Beginning match pipeline for Patient {patient_profile.get('patient_id')}...")
         
         # 1. Retrieve candidates
-        phenotypes = patient_profile.get("phenotypes", [])
-        candidates = self.retrieval_agent.retrieve_candidate_trials(phenotypes, limit=limit)
+        candidates = self.retrieval_agent.retrieve_candidate_trials(patient_profile, limit=limit)
         if not candidates:
             return {
                 "patient_id": patient_profile.get("patient_id"),
@@ -47,7 +46,7 @@ class Orchestrator:
         # 3. Generate explanations
         final_reports = []
         for report in match_reports:
-            explanation = self.explainability_agent.generate_explanation_report(patient_profile, report)
+            explanation = self.explainability_agent.generate_explanation_report(patient_profile, report, persona=persona)
             final_reports.append({
                 "match_report": report,
                 "explanation_md": explanation

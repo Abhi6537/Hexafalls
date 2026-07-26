@@ -3,66 +3,90 @@ from sentence_transformers import SentenceTransformer
 import json
 import os
 import sys
+import requests
+import re
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 import config
 
 class RetrievalAgent:
     """
-    Retrieves the top candidate clinical trials for a patient's phenotypes 
-    using semantic search query vectors against ChromaDB. (Unit 5.1)
+    Retrieves candidate clinical trials dynamically from ClinicalTrials.gov API.
     """
     def __init__(self):
-        self.chroma_client = chromadb.PersistentClient(path=str(config.VECTOR_DB_DIR))
-        self.collection = self.chroma_client.get_collection(name="trial_criteria")
-        print(f"Retrieval Agent: Connected to ChromaDB. Loading PubMedBERT...")
-        self.embed_model = SentenceTransformer(config.PUBMEDBERT_MODEL)
+        print("Retrieval Agent: Initialized (Dynamic API Mode).")
         
-    def retrieve_candidate_trials(self, patient_phenotypes, limit=3):
+    def retrieve_candidate_trials(self, patient_profile, limit=3):
         """
-        Takes patient phenotype strings, embeds them, and searches ChromaDB 
-        to find corresponding active trials. Returns unique trial structures.
+        Fetches active trials for the extracted disease from ClinicalTrials.gov API.
         """
-        if not patient_phenotypes:
-            print("Retrieval Agent: No patient phenotypes provided.")
-            return []
+        disease = patient_profile.get("disease", "") if isinstance(patient_profile, dict) else (patient_profile[0] if patient_profile else "")
+        if not disease or disease.lower() == "unknown disease":
+            print("Retrieval Agent: No specific disease identified in profile. Falling back to Fabry Disease.")
+            disease = "Fabry Disease"
             
-        print(f"Retrieval Agent: Analyzing symptoms: {patient_phenotypes}")
-        query_text = " ".join(patient_phenotypes)
-        query_vector = self.embed_model.encode(query_text).tolist()
+        print(f"Retrieval Agent: Fetching real trials for '{disease}' from ClinicalTrials.gov...")
         
-        # Query ChromaDB collection
-        results = collection_results = self.collection.query(
-            query_embeddings=[query_vector],
-            n_results=10 # Get top 10 criteria matches, then group by unique trials
-        )
+        # Call the ClinicalTrials.gov API (v2)
+        api_url = f"https://clinicaltrials.gov/api/v2/studies"
+        params = {
+            "query.cond": disease,
+            "filter.overallStatus": "RECRUITING",
+            "pageSize": limit
+        }
         
-        trial_nct_ids = set()
         candidates = []
-        
-        # Read candidate trials json database to get inclusion/exclusion list structure
-        parsed_trials_path = config.TRIALS_DIR / "parsed_trials.json"
-        with open(parsed_trials_path, "r", encoding="utf-8") as f:
-            all_trials = json.load(f)
-            
-        for meta in results["metadatas"][0]:
-            nct_id = meta["nct_id"]
-            if nct_id not in trial_nct_ids:
-                trial_nct_ids.add(nct_id)
-                # Find matching trial details from the database
-                for t in all_trials:
-                    if t["nctId"] == nct_id:
-                        candidates.append(t)
-                        break
-                        
-            if len(candidates) >= limit:
-                break
+        try:
+            response = requests.get(api_url, params=params, timeout=10)
+            if response.status_code == 200:
+                data = response.json()
+                studies = data.get("studies", [])
                 
+                for study in studies:
+                    protocol = study.get("protocolSection", {})
+                    ident = protocol.get("identificationModule", {})
+                    eligibility = protocol.get("eligibilityModule", {})
+                    
+                    nct_id = ident.get("nctId", "Unknown")
+                    title = ident.get("briefTitle", "No Title")
+                    criteria_text = eligibility.get("eligibilityCriteria", "")
+                    
+                    # Simple heuristic parser for criteria text
+                    inclusion = []
+                    exclusion = []
+                    
+                    # Split by "Exclusion Criteria:"
+                    parts = re.split(r"Exclusion Criteria:", criteria_text, flags=re.IGNORECASE)
+                    inc_text = parts[0]
+                    exc_text = parts[1] if len(parts) > 1 else ""
+                    
+                    # Split by newlines or dashes
+                    for line in inc_text.split('\n'):
+                        line = line.strip().strip('-* ')
+                        if len(line) > 10 and "Inclusion Criteria:" not in line:
+                            inclusion.append(line)
+                            
+                    for line in exc_text.split('\n'):
+                        line = line.strip().strip('-* ')
+                        if len(line) > 10:
+                            exclusion.append(line)
+                            
+                    candidates.append({
+                        "nctId": nct_id,
+                        "title": title,
+                        "inclusion_criteria": inclusion,
+                        "exclusion_criteria": exclusion
+                    })
+                    
+            print(f"Retrieval Agent: Successfully downloaded and parsed {len(candidates)} real trials!")
+        except Exception as e:
+            print(f"Retrieval Agent Error fetching trials: {e}")
+            
         print(f"Retrieval Agent: Identified {len(candidates)} candidate trials for evaluation.")
         return candidates
 
 if __name__ == "__main__":
     agent = RetrievalAgent()
-    candidates = agent.retrieve_candidate_trials(["Fabry disease", "neuropathic pain", "kidney disease"])
+    candidates = agent.retrieve_candidate_trials({"disease": "Fabry disease"})
     for t in candidates:
         print(f" - {t['nctId']}: {t['title']}")

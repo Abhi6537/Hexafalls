@@ -5,7 +5,8 @@ datasets==2.21.0
 sentence-transformers==3.0.1
 chromadb==0.5.5
 langchain==0.2.14
-langchain-google-genai==2.0.1
+langchain-google-genai
+supabase==2.0.1
 google-generativeai==0.8.0
 langgraph==0.2.14
 requests==2.32.3

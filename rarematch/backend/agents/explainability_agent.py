@@ -19,9 +19,9 @@ class ExplainabilityAgent:
         self.model = genai.GenerativeModel(config.LLM_MODEL)
         print(f"Explainability Agent: Initialized Gemini model ({config.LLM_MODEL}).")
         
-    def generate_explanation_report(self, patient_profile, match_report):
+    def generate_explanation_report(self, patient_profile, match_report, persona="doctor"):
         """
-        Calls Gemini to explain eligibility criteria passes/fails.
+        Calls Gemini to explain eligibility criteria passes/fails, formatted for a specific persona.
         """
         patient_summary = (
             f"Patient Profile:\n"
@@ -41,9 +41,17 @@ class ExplainabilityAgent:
                 f"    Matcher Evidence: {crit['evidence']}\n\n"
             )
             
+        system_instructions = {
+            "doctor": "You are a clinical trial matching expert advising a physician. Use dense medical terminology, be highly concise, and focus heavily on clinical biomarkers, inclusion/exclusion criteria, and mechanisms of action.",
+            "patient": "You are an empathetic medical guide helping a patient. Write at an 8th-grade reading level. Do not use dense medical jargon. Explain clearly and simply what this trial means for them and their day-to-day life. Be supportive.",
+            "researcher": "You are a clinical trial coordinator. Focus on cohort sizes, statistical power, protocol alignment, recruitment status, and whether this patient represents an ideal demographic fit for the study."
+        }
+        
+        role_instruction = system_instructions.get(persona.lower(), system_instructions["doctor"])
+            
         prompt = (
-            f"You are a clinical trial matching expert advising a physician.\n"
-            f"Analyze the matching report below and generate a concise, professional explanation.\n\n"
+            f"{role_instruction}\n\n"
+            f"Analyze the matching report below and generate a professional explanation based on your persona.\n\n"
             f"{patient_summary}\n"
             f"Trial NCT ID: {match_report['trial_nct_id']}\n"
             f"Trial Title: {match_report['trial_title']}\n"
@@ -51,11 +59,11 @@ class ExplainabilityAgent:
             f"Recommendation: {match_report['eligibility_status']}\n\n"
             f"Criteria Details:\n"
             f"{criteria_list_str}\n"
-            f"Please structure your output using these sections:\n"
-            f"1. **Summary Recommendation**: Concise medical summary of eligibility.\n"
+            f"Please structure your output using these sections (adjust tone appropriately for the {persona} persona):\n"
+            f"1. **Summary Recommendation**: Concise summary of eligibility.\n"
             f"2. **Inclusion Breakdown**: Explain why key inclusion points passed or failed.\n"
             f"3. **Exclusion Warnings**: Explain why exclusion points passed, failed, or are uncertain.\n"
-            f"4. **Suggested Next Steps**: Actions for the physician (e.g. order lab verification, check pregnancy, schedule screening)."
+            f"4. **Suggested Next Steps**: Actions to take next."
         )
         
         try:
