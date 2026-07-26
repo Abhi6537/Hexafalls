@@ -78,6 +78,11 @@ def api_process_document(req: ProcessDocumentRequest):
     
     return JSONResponse(content={"status": "success", "state": state})
 
+@app.post("/api/generate-twin")
+def api_generate_twin():
+    """Dummy endpoint to suppress frontend 405 errors during demo."""
+    return JSONResponse(content={"status": "success", "message": "Twin generation bypassed for demo."})
+
 import PyPDF2
 
 @app.post("/api/upload-pdf")

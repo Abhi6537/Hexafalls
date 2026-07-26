@@ -164,7 +164,12 @@ export function BentoDashboard({ matchState, persona }) {
             <motion.section variants={itemVariants}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1.5rem' }}>
                 <CheckCircle2 size={20} color="var(--accent-teal)" />
-                <h2 style={{ margin: 0, fontSize: '1.25rem', fontWeight: 600, color: 'var(--text-primary)' }}>Trial Conditions</h2>
+                <div style={{ display: 'flex', alignItems: 'baseline', gap: '0.75rem' }}>
+                    <h2 style={{ margin: 0, fontSize: '1.25rem', fontWeight: 600, color: 'var(--text-primary)' }}>Trial Conditions</h2>
+                    <span style={{ color: 'var(--text-secondary)', fontSize: '0.85rem' }}>
+                        According to the <a href="https://clinicaltrials.gov/" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--accent-primary)', textDecoration: 'underline', textUnderlineOffset: '2px' }}>ClinicalTrials.gov</a> database
+                    </span>
+                </div>
               </div>
               
               <div className="premium-panel" style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', gap: '1rem' }}>

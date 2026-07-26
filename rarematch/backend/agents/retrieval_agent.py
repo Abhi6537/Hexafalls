@@ -21,7 +21,15 @@ class RetrievalAgent:
         Fetches active trials for the extracted disease from ClinicalTrials.gov API.
         """
         disease = patient_profile.get("disease", "") if isinstance(patient_profile, dict) else (patient_profile[0] if patient_profile else "")
-        if not disease or disease.lower() == "unknown disease":
+        
+        disease_str = str(disease).lower()
+        if "fabry" in disease_str:
+            disease = "Fabry Disease"
+        elif "gaucher" in disease_str:
+            disease = "Gaucher Disease"
+        elif "pompe" in disease_str:
+            disease = "Pompe Disease"
+        elif not disease or disease_str == "unknown disease":
             print("Retrieval Agent: No specific disease identified in profile. Falling back to Fabry Disease.")
             disease = "Fabry Disease"
             
@@ -29,6 +37,12 @@ class RetrievalAgent:
         
         # Call the ClinicalTrials.gov API (v2)
         api_url = f"https://clinicaltrials.gov/api/v2/studies"
+        
+        print("\n" + "="*75)
+        print("🌐 [GOV API REQUEST] Fetching LIVE active trials from ClinicalTrials.gov API...")
+        print(f"📡 Endpoint URL: {api_url}?query.cond={disease}")
+        print("="*75 + "\n")
+        
         params = {
             "query.cond": disease,
             "filter.overallStatus": "RECRUITING",

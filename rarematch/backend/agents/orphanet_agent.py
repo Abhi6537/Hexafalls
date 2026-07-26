@@ -14,12 +14,25 @@ class OrphanetAgent:
         if not disease_name or disease_name.lower() == "unknown disease":
             return {"official_name": "Unknown Disease", "is_verified": False, "orphanet_id": None}
             
+        disease_str = str(disease_name).lower()
+        if "fabry" in disease_str:
+            disease_name = "Fabry Disease"
+        elif "gaucher" in disease_str:
+            disease_name = "Gaucher Disease"
+        elif "pompe" in disease_str:
+            disease_name = "Pompe Disease"
+            
         print(f"Orphanet Agent: Verifying '{disease_name}'...")
         encoded = urllib.parse.quote(disease_name)
-        url = f"https://www.ebi.ac.uk/ols4/api/search?q={encoded}&ontology=ordo"
+        search_url = f"https://www.ebi.ac.uk/ols4/api/search?q={encoded}&ontology=ordo"
+        
+        print("\n" + "="*75)
+        print("🌐 [GOV API REQUEST] Fetching disease ontology from EBI (Orphanet) API...")
+        print(f"📡 Endpoint URL: https://www.ebi.ac.uk/ols4/api/search?q={disease_name}&ontology=ordo")
+        print("="*75 + "\n")
         
         try:
-            req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
+            req = urllib.request.Request(search_url, headers={'User-Agent': 'Mozilla/5.0'})
             res = urllib.request.urlopen(req, timeout=10)
             data = json.loads(res.read().decode())
             
