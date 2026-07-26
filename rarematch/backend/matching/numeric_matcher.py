@@ -1,6 +1,6 @@
 import re
 
-def evaluate_numeric_criterion(criterion_text, patient_labs, patient_age):
+def evaluate_numeric_criterion(criterion_text, patient_profile, _patient_age_deprecated):
     """
     Parses inequality statements (e.g. "Age >= 18", "eGFR >= 30") and compares 
     against structured patient records. (Unit 4.1)
@@ -10,6 +10,12 @@ def evaluate_numeric_criterion(criterion_text, patient_labs, patient_age):
     
     # 1. Parse age-related checks
     if "age" in text_lower or "aged" in text_lower:
+        age_str = patient_profile.get("age") or ""
+        age_match = re.search(r"(\d+)", str(age_str))
+        if not age_match:
+            return None, "Patient age is missing or invalid in record."
+        patient_age = int(age_match.group(1))
+
         # Match ">= 18", ">=18", ">= 18 years", "18 years or older", "aged 18 to 50"
         # 1.1 Match ranges: "18 to 50"
         range_match = re.search(r"(\d+)\s*to\s*(\d+)", text_lower)
@@ -35,9 +41,11 @@ def evaluate_numeric_criterion(criterion_text, patient_labs, patient_age):
             
     # 2. Parse eGFR kidney lab values
     if "egfr" in text_lower or "glomerular filtration" in text_lower:
-        egfr_val = patient_labs.get("eGFR")
-        if egfr_val is None:
+        egfr_str = patient_profile.get("egfr") or patient_profile.get("kidney_egfr") or ""
+        egfr_match = re.search(r"(\d+)", str(egfr_str))
+        if not egfr_match:
             return None, "Patient renal lab (eGFR) missing in record."
+        egfr_val = int(egfr_match.group(1))
             
         # Match lower bounds: ">= 30", ">= 45"
         gte_match = re.search(r"(?:>=|greater than or equal to)\s*(\d+)", text_lower)

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { PersonaSelector } from '../components/PersonaSelector';
 import { DataUploader } from '../components/DataUploader';
 import { BentoDashboard } from '../components/BentoDashboard';
 import { MatchingEngineLoader } from '../components/MatchingEngineLoader';
@@ -15,9 +14,8 @@ export function Dashboard() {
 
   const [loading, setLoading] = useState({ match: false });
   
-  // Wizard Steps: 0 = Persona, 1 = Upload, 2 = Results
-  const [workflowStep, setWorkflowStep] = useState(0);
-  const [persona, setPersona] = useState('doctor');
+  // Wizard Steps: 1 = Upload, 2 = Results
+  const [workflowStep, setWorkflowStep] = useState(1);
 
   // Load existing state if applicable
   useEffect(() => {
@@ -55,10 +53,6 @@ export function Dashboard() {
       .catch(err => console.error("Error loading patient reports:", err));
   };
 
-  const handlePersonaSelect = (selectedPersona) => {
-    setPersona(selectedPersona);
-    setWorkflowStep(1); // Move to Upload
-  };
 
   // Called when user finishes Upload step
   const handleProceedToMatch = () => {
@@ -71,11 +65,10 @@ export function Dashboard() {
     fetch('/api/generate-twin', { method: 'POST' })
       .then(res => res.json())
       .then(genData => {
-        // 2. Run Match with Persona
         return fetch('/api/match-trials', { 
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ persona: persona })
+            body: JSON.stringify({ persona: 'doctor' })
         });
       })
       .then(res => res.json())
@@ -106,22 +99,15 @@ export function Dashboard() {
   };
 
   return (
-    <div className="dashboard-container" style={{ display: 'flex', height: '100vh', overflow: 'hidden' }}>
+    <div className="dashboard-container" style={{ minHeight: '100vh', position: 'relative' }}>
       
-      
-      
-      <div style={{ flex: 1, position: 'relative', overflow: 'hidden' }}>
+      <div style={{ width: '100%', height: '100%' }}>
         
         <AnimatePresence mode="wait">
           
-          {workflowStep === 0 && (
-            <motion.div key="persona" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} style={{ height: '100%' }}>
-              <PersonaSelector onSelect={handlePersonaSelect} />
-            </motion.div>
-          )}
 
           {workflowStep === 1 && (
-            <motion.div key="upload" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} style={{ height: '100%' }}>
+            <motion.div key="upload" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
               {loading.match ? (
                  <MatchingEngineLoader />
               ) : (
@@ -131,8 +117,8 @@ export function Dashboard() {
           )}
 
           {workflowStep === 2 && (
-            <motion.div key="dashboard" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} style={{ height: '100%' }}>
-              <BentoDashboard matchState={state} persona={persona} />
+            <motion.div key="dashboard" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
+              <BentoDashboard matchState={state} persona="doctor" />
             </motion.div>
           )}
 
@@ -140,7 +126,7 @@ export function Dashboard() {
         
       </div>
 
-      <div className="glow-effect" style={{ top: '50%', left: '50%', transform: 'translate(-50%, -50%)', opacity: 0.3, width: '120vw', height: '120vh', zIndex: -1, pointerEvents: 'none' }} />
+      <div className="glow-effect" style={{ position: 'fixed', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', opacity: 0.3, width: '120vw', height: '120vh', zIndex: -1, pointerEvents: 'none' }} />
       <style>{`
         @keyframes spin { 100% { transform: rotate(360deg); } }
       `}</style>

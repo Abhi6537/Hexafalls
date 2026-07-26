@@ -1,4 +1,4 @@
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, UploadFile, File
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import HTMLResponse, JSONResponse
 from pydantic import BaseModel
@@ -77,6 +77,45 @@ def api_process_document(req: ProcessDocumentRequest):
     state["match_results"] = None
     
     return JSONResponse(content={"status": "success", "state": state})
+
+import PyPDF2
+
+@app.post("/api/upload-pdf")
+async def api_upload_pdf(file: UploadFile = File(...)):
+    """Parses a PDF file into a patient profile using the local NER Agent."""
+    if not file.filename.endswith('.pdf'):
+        raise HTTPException(status_code=400, detail="Must be a PDF file.")
+        
+    try:
+        pdf_reader = PyPDF2.PdfReader(file.file)
+        text = ""
+        for page in pdf_reader.pages:
+            extracted = page.extract_text()
+            if extracted:
+                text += extracted + "\n"
+                
+        global ner_agent, orphanet_agent
+        if ner_agent is None:
+            from agents.ner_agent import NERAgent
+            from agents.orphanet_agent import OrphanetAgent
+            ner_agent = NERAgent()
+            orphanet_agent = OrphanetAgent()
+            
+        profile = ner_agent.process_document(text)
+        
+        verification = orphanet_agent.verify_disease(profile["disease"])
+        profile["disease"] = verification["official_name"]
+        profile["orphanet_verified"] = verification["is_verified"]
+        profile["orphanet_id"] = verification.get("orphanet_id")
+        
+        state["patient_profile"] = profile
+        state["patient_note"] = text
+        state["extracted_entities"] = None
+        state["match_results"] = None
+        
+        return JSONResponse(content={"status": "success", "state": state})
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
 
 @app.post("/api/run-ner")
 def api_run_ner():

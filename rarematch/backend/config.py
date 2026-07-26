@@ -50,7 +50,7 @@ NER_SERVICE_API_URL = "http://localhost:8001"                         # BioBERT 
 # ── LLM API ────────────────────────────────────────────────────────────────────
 GOOGLE_API_KEY     = os.getenv("GOOGLE_API_KEY", "")
 LLM_PROVIDER       = "google"              # "google" (free Gemini API)
-LLM_MODEL          = "gemini-2.0-flash"    # Fast, free, great quality
+LLM_MODEL          = "gemini-2.0-flash-lite"    # Lighter model to avoid free-tier quota limits
 
 # ── Supabase Configuration ─────────────────────────────────────────────────────
 SUPABASE_URL = os.getenv("SUPABASE_URL", "")

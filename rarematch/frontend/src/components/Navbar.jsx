@@ -27,7 +27,7 @@ export function Navbar() {
           </div>
           <div>
             <h1 style={{ fontSize: '1.125rem', fontWeight: 600, margin: 0, color: 'var(--text-primary)', letterSpacing: '-0.02em' }}>
-              RareMatch
+              Know Your Trial
             </h1>
           </div>
         </Link>

@@ -55,7 +55,7 @@ def score_patient_against_trial(patient_profile, trial_criteria_list):
             
             # Route evaluation based on category
             if crit_type == "NUMERIC":
-                status, evidence = evaluate_numeric_criterion(crit, patient_labs, patient_age)
+                status, evidence = evaluate_numeric_criterion(crit, patient_profile, None)
             elif crit_type == "TEMPORAL":
                 status, evidence = evaluate_temporal_criterion(crit, ert_duration)
             elif crit_type == "CATEGORICAL":

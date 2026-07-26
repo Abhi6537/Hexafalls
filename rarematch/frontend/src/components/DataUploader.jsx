@@ -9,6 +9,7 @@ export function DataUploader({ onProceed }) {
   const [textInput, setTextInput] = useState('');
   const [currentStep, setCurrentStep] = useState(0);
   const [apiData, setApiData] = useState(null);
+  const [pdfFile, setPdfFile] = useState(null);
 
   const steps = [
     "Booting local NLP model (d4data/biomedical-ner-all)...",
@@ -42,26 +43,54 @@ export function DataUploader({ onProceed }) {
   }, [currentStep, apiData, steps.length]);
 
   const handleRealUpload = async () => {
+    if (activeTab === 'pdf' && !pdfFile) {
+        alert("Please select a PDF file first.");
+        return;
+    }
+    if (activeTab === 'text' && !textInput.trim()) {
+        alert("Please paste some text first.");
+        return;
+    }
+
     setIsProcessing(true);
     setCurrentStep(0);
     setApiData(null);
     setResult(null);
     try {
-      const payload = activeTab === 'text' ? textInput : "45 year old male patient diagnosed with Gaucher disease presenting with hepatosplenomegaly, anemia, and thrombocytopenia.";
-      
-      const response = await fetch('/api/process-document', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ text: payload })
-      });
+      let response;
+      if (activeTab === 'pdf') {
+          const formData = new FormData();
+          formData.append("file", pdfFile);
+          
+          response = await fetch('/api/upload-pdf', {
+            method: 'POST',
+            body: formData
+          });
+      } else {
+          response = await fetch('/api/process-document', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ text: textInput })
+          });
+      }
       
       const data = await response.json();
       if (data.status === 'success') {
         setApiData(data.state.patient_profile);
+      } else {
+        alert("Error: " + data.detail);
+        setIsProcessing(false);
       }
     } catch (err) {
       console.error("Error processing document:", err);
+      setIsProcessing(false);
     }
+  };
+
+  const handleFileChange = (e) => {
+      if (e.target.files && e.target.files[0]) {
+          setPdfFile(e.target.files[0]);
+      }
   };
 
   return (
@@ -97,9 +126,20 @@ export function DataUploader({ onProceed }) {
         {/* Dynamic Area */}
         <AnimatePresence mode="wait">
           {!isProcessing && !result && activeTab === 'pdf' && (
-            <motion.div key="pdf" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} style={{ height: '200px', border: '2px dashed rgba(255,255,255,0.1)', borderRadius: '12px', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '1rem', cursor: 'pointer' }} onClick={handleRealUpload}>
-              <FileUp size={48} color="var(--text-secondary)" />
-              <span style={{ color: 'var(--text-secondary)' }}>Drag and drop your PDF here, or click to browse</span>
+            <motion.div key="pdf" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} style={{ height: '200px', border: '2px dashed rgba(255,255,255,0.1)', borderRadius: '12px', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '1rem', position: 'relative' }}>
+              <input 
+                type="file" 
+                accept=".pdf" 
+                onChange={handleFileChange} 
+                style={{ position: 'absolute', inset: 0, opacity: 0, cursor: 'pointer' }}
+              />
+              <FileUp size={48} color={pdfFile ? "var(--accent-teal)" : "var(--text-secondary)"} />
+              <span style={{ color: pdfFile ? "var(--accent-teal)" : "var(--text-secondary)" }}>
+                  {pdfFile ? pdfFile.name : "Click to browse or drop your PDF here"}
+              </span>
+              {pdfFile && (
+                  <button className="primary-button" onClick={handleRealUpload} style={{ zIndex: 10, marginTop: '1rem' }}>Analyze PDF</button>
+              )}
             </motion.div>
           )}
 
